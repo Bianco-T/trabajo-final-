@@ -6,11 +6,11 @@
 #define ADC_PIN 26
 #define PWM_PIN 15
 
-// Constantes PID ajustadas
+
 float Kp = 2.0, Ki = 0.5, Kd = 0.1;
 float referencia = 3500.0;
 
-// Variables del controlador
+
 float error = 0, integral = 0, derivative = 0, prev_error = 0;
 float control = 0;
 
@@ -23,7 +23,7 @@ float control_min = 0.0;     // Límite mínimo del control (duty cycle)
 void setup() {
     stdio_init_all();
 
-    // Configuración del ADC
+    
     adc_init();
     adc_gpio_init(ADC_PIN);
     adc_select_input(0);
